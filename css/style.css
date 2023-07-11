@@ -1,0 +1,162 @@
+@charset "UTF-8";
+/*
+    1400PX / 16PX => 87.5
+    1200PX / 16PX => 75
+    992PX / 16PX => 62
+    768PX / 16PX => 48
+    576PX / 16PX => 36
+    480PX / 16PX => 30
+
+    1400PX / 16PX => 87.5
+    1200PX / 16PX => 75
+    992PX / 16PX => 62
+    768PX / 16PX => 48
+    576PX / 16PX => 36
+    480PX / 16PX => 30
+
+*/
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  /*
+      1rem = 16px
+      width: 91px -> 5.6875rem
+      // ⚡⚡ transformarlo a 10px la fuente base 
+      del root
+
+      1rem = 10px
+      width: 91px -> 9.1rem
+
+      16px ===== 100%
+      10px ----> 62.5%
+  */
+  font-size: 62.5%;
+}
+@media only screen and (max-width: 36em) {
+  html {
+    font-size: 50%;
+  }
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.container {
+  max-width: 140rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media only screen and (max-width: 62em) {
+  .container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+@media only screen and (max-width: 48em) {
+  .container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+}
+
+.btn {
+  font-size: 1.8rem;
+  font-family: "Space Mono", monospace;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding: 2rem 4rem;
+  border-radius: 0.5rem;
+}
+
+header {
+  font-family: "Inconsolata", monospace;
+}
+header h1 {
+  margin: 3rem 0;
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #333;
+}
+@media only screen and (max-width: 62em) {
+  header h1 {
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 48em) {
+  header h1 {
+    margin-top: 3rem;
+    text-align: start;
+  }
+}
+
+section .container {
+  padding-top: 8rem;
+  display: flex;
+  column-gap: 5rem;
+}
+section .container .image {
+  width: 50%;
+}
+section .container .image img {
+  width: 100%;
+}
+@media only screen and (max-width: 48em) {
+  section .container .image {
+    margin: auto;
+    width: 100%;
+  }
+  section .container .image img {
+    width: 40rem;
+  }
+}
+section .container .information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: "Space Mono", monospace;
+  row-gap: 4rem;
+}
+section .container .information h2 {
+  font-weight: 700;
+  font-size: 6rem;
+}
+@media only screen and (max-width: 62em) {
+  section .container .information h2 {
+    font-size: 4rem;
+  }
+}
+section .container .information p {
+  width: 50%;
+  font-size: 2rem;
+}
+@media only screen and (max-width: 62em) {
+  section .container .information p {
+    width: 80%;
+  }
+}
+section .container .information a {
+  padding: 2rem;
+  background-color: #333;
+  color: #fff;
+  text-transform: uppercase;
+  border-radius: 0.4rem;
+}
+@media only screen and (max-width: 48em) {
+  section .container {
+    flex-direction: column;
+    padding-top: 0;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
